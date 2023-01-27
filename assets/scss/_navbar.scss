@@ -102,6 +102,7 @@
 
 }
 .nav-active {
+    backdrop-filter: blur(15px);
     box-shadow: 0px 0px 10px rgb(0 0 0 / 15%) !important;
     background:  rgba($black, 0.7) !important;
     transition: all 1s !important;

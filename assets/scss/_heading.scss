@@ -1,110 +1,49 @@
-@media (min-width: 991.98px) {
-    .top_main_heading {
-        & .inner_container {
-            &::before {
-                font-size: 200px !important;
-            }
-        }
-    }
-}
-@media (min-width: 767.98px) {
-    .top_main_heading {
-        & .inner_container {
-            position: relative;
-            &::before {
-                content: "About";
-                color: #f0f0f0;
-                font-size: 150px;
-                font-weight: 700;
-                position: absolute;
-                top: 50px;
-                left: 50%;
-                line-height: 100%;
-                transform: translate(-50%, -50%);
-            }
-        }
-    }
-    // top_section
-    .top_section {
-        padding-top: 180px !important;
-        padding-bottom: 170px !important;
-    }
-}
-
-// top_section
-.top_section {
-    padding-top: 140px;
-    padding-bottom: 130px;
-}
-
-// .headings {
-//     & span {
-//         font-family: Arial, Helvetica, sans-serif;
-//         &::before {
-//             content: "";
-//             width: 50px;
-//             height: 2px;
-//             background-color: $black;
-//             position: absolute;
-//             top: 50%;
-//             left: 0%;
-//             transform: translate(-50%, -50%);
-//         }
-//     }
-// }
-// .headings {
-//     display: grid;
-//     place-items: center;
-//     & span {
-//         font-family: Arial, Helvetica, sans-serif;
-//         color: #fff;
-//         -webkit-text-stroke: 1px $theme1;
-//         letter-spacing: 8px;
-//         &::before {
-//             content: "Services";
-//             width: 100%;
-//             color: $theme1;
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             border-right: 5px solid $theme1;
-//             animation: 5s slide linear infinite;
-//             overflow: hidden;
-//         }
-//         &.Portfolio {
-//             &::before {
-//                 content: "Portfolio";
-//             }
-//         }
-//     }
-//     @keyframes slide {
-//         0% {
-//             width: 0;
-//         }
-//         50% {
-//             width: 100%;
-//         }
-//         100% {
-//             width: 0;
-//         }
-//     }
-// }
 .typewrite {
-    font-family: Arial, Helvetica, sans-serif;
     &.headingS {
         letter-spacing: 8px;
     }
 }
-
-.other_page_heading {
+.sideHeading {
+    transform: rotate(90deg);
+    color: rgba($black, 0.8);
+    letter-spacing: 1rem;
+    transform-origin: left top 0;
     position: relative;
+    left: -15px;
+    top: 30px;
     &::after {
         content: "";
         position: absolute;
-        bottom: 0%;
-        left: 0%;
-        width: 50%;
-        height: 2px;
-        background-color: $theme1;
+        top: 12px;
+        background: $black;
+        width: 40px;
+        height: 1px;
+    }
+}
+
+.sectionheading {
+    display: inline-block;
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    &::after{
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 10%;
+        bottom: 0;
+        left: 0;
+        background: $theme2;
+        transition: all ease-in-out 0.3s;
+
+    }
+    &:hover{
+        color: $theme2 !important;
+        & span {
+            color: $black !important;
+        }
+        cursor: pointer;
+        &::after{
+            width: 100%;
+        }
     }
 }

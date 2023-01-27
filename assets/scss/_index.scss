@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-@import "variables";
-@import "main";
-
 // ***************Hero Section*********
 .hero-section {
   background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/index/herobg.jpg);
@@ -10,7 +7,7 @@
   background-position: center;
   background-repeat: no-repeat;
   & .inner_section {
-    padding: 12em 0em 0em 0em;
+    // padding: 12em 0em 0em 0em;
     & .content {
       & .servicecontent {
         & .serviceimg {
@@ -42,193 +39,192 @@
   & .inner_section{
     & .cardSection {
       margin-bottom: -6rem;
-      & .card {
+    }
+  }
+}
+.cardSection {
+  & .card {
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 /20%);
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all ease-in-out .3s;
+    & .card-body {
+      & .card-img {
+        height: 70px;
+      }
+      & .readMoreBtn {
+        transform: translateX(-100%);
+        transition: all ease-in-out 0.3s;
+      }
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 0px;
+      height: 7px;
+      background: $theme2;
+      transition: all ease-in-out .3s;
+    }
+    &:hover{
+      &::after{
+        width: 100%;
+      }
+      & .card-body {
+        & .readMoreBtn {
+          transform: translateX(0);
+        }
+      }
+    }
+    // &.active {
+    //   background-color: $theme2;
+    //   & .card-body {
+    //   color: $white !important;
+    //     & .card-img {
+    //       height: 70px;
+    //       & img {
+    //         filter: brightness(1000);
+    //       }
+    //     }
+    //     & .readMoreBtn {
+    //       color: $theme1 !important;
+    //       & img {
+    //         filter: brightness(1000);
+    //       }
+    //     }
+    //   }
+    //   &::after{
+    //     background: $theme1;
+    //   }
+    // }
+    &.active {
+      & .card-body {
+        & .readMoreBtn {
+          transform: translateX(0);
+        }
+      }
+      &::after{
+        width: 100%;
+      }}
+  }
+}
+
+
+// ***********checkAbility **********************
+.checkAbility {
+  background-image: linear-gradient(90deg, rgba($black, 0.7) 30%, rgba($black, 0.7) 100%), url(../img/index/why-chooseUs.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  & .inner_section {
+    &  .ability {
+      font-size: 50px;
+    }
+    & .checkEligibility {
+      & .input-group {
+        & .form-control {
+          &:focus {
+            border-color: transparent !important;
+          }
+          &:focus-visible {
+            outline: none;
+          }
+        }
+        & .input-group-text {
+          & button {
+            border-top-right-radius: 0.375rem;
+            border-bottom-right-radius: 0.375rem;
+            transition: all ease-in-out 0.3s;
+            &:hover{
+              background-color: $theme2 !important;
+              color: $white !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ************Why Choose Us*****************
+.whychooseusSection {
+  & .inner_section {
+    & .leftSide {
+    & .userImg {
+      overflow: hidden;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.2);
+        transition: all ease-in-out 0.3s;
+        inset: 0;
+      }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 6px;
+        bottom: 0;
+        left: 0;
+        background: $theme2;
+        transition: all ease-in-out 0.3s;
+      }
+    }
+    & .ratings {
+      transition: all ease-in-out 0.3s;
+      overflow: hidden;
+      box-shadow: 0px 0px 10px 0px rgb(0 0 0 /20%);
+      left: 0;
+      top: -15px;
+      transition: all ease-in-out 0.3s;
+      & .card-body {
+        & .userrating, & .ratingCustomer {
+          transition: all ease-in-out 0.3s;
+        }
+      }
+    }
+    &:hover {
+      & .userImg {
+        &::before {
+        background-color: rgba($black, 0.5);
+        }
+        &::after {
+          width: 100%;
+        }
+      }
+      & .ratings {
+        cursor: pointer;
         & .card-body {
-          & .card-img {
-            height: 70px;
+          & .userrating {
+            color: $black !important;
+          }
+          & .ratingCustomer {
+            color: $theme2 !important;
           }
         }
       }
     }
   }
-}
-
-
-.inner {
-  transform: rotate(90deg);
-  color:  rgba($black, 0.8);
-  letter-spacing: 1rem;
-  transform-origin: left top 0;
-  font-family: Arial, sans-serif;
-  left: 16px;
-  top: 24px;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 8px;
-    right: -40px;
-    background: $black;
-    width: 40px;
-    height: 1px;
-  }
-}
-
-.services_heading {
-  & .inner_container {
-    & .swiper {
-      width: 280px;
-    }
-    & .content_side {
-      & .main_content {
-        & .card {
-
-          overflow: hidden;
-          font-family: Arial, Helvetica, sans-serif !important;
-          position: relative;
-          cursor: pointer;
-          transition: all 0.4s;
-          &::before {
-            content: "";
-            background-image: url(../../img/index/card_bg.jpg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-            position: absolute;
-            inset: 0;
-            // filter: blur(3px);
-          }
-          &::after{
-            content: "";
-            background: rgba($white, 0.4);
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            transition: all .4s;
-          }
-          & .card-body {
-            & .heading {
-              transition: all 0.4s;
-            }
-            & ul {
-              & li {
-                font-weight: 500;
-                transition: all .4s;
-              }
-            }
-          }
-          &:hover {
-            box-shadow: 1px 9px 24px rgba(152, 152, 152, 0.25) !important;
-            &::after {
-              top: 0% !important;
-            }
-            // & .card-body {
-            //   color: $theme2 !important;
-            // }
-          }
-        }
+  & .contentSide {
+    & .whychooseSide {
+      & .monyIcone {
+        height: 60px;
       }
     }
   }
+  }
 }
 
-
-// Small devices (landscape phones, 576px and up)
-@mixin hero-mixin-min-sm() {
-}
-// Medium devices (tablets, 768px and up)
-@mixin hero-mixin-min-md() {
-}
-
-// Large devices (desktops, 992px and up)
-@mixin hero-mixin-min-lg() {
+.discountSection {
+  background-image: linear-gradient(90deg, rgba($black, 0.8) 30%, rgba($black, 0.5) 100%), url(../img/index/discountbg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-// X-Large devices (large desktops, 1200px and up)
-@mixin hero-mixin-min-xl() {
-}
-
-// XX-Large devices (larger desktops, 1400px and up)
-@mixin hero-mixin-min-xxl() {
-}
-
-// X-Small devices (portrait phones, less than 576px)
-@mixin hero-mixin-max-xs() {
-}
-
-// Small devices (landscape phones, less than 768px)
-@mixin hero-mixin-max-sm() {
-}
-
-// Medium devices (tablets, less than 992px)
-@mixin hero-mixin-max-md() {
-}
-
-// Large devices (desktops, less than 1200px)
-@mixin hero-mixin-max-lg() {
-}
-
-// Large devices (desktops, less than 1300px)
-@mixin hero-mixin-max-1300() {
-}
-
-// X-Large devices (large desktops, less than 1400px)
-@mixin hero-mixin-max-xl() {
-}
-
-// X-Small devices (portrait phones, less than 576px)
-// No media query for `xs` since this is the default in Bootstrap
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  @include hero-mixin-min-sm();
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  @include hero-mixin-min-md();
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  @include hero-mixin-min-lg();
-}
-
-// X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  @include hero-mixin-min-xl();
-}
-
-// XX-Large devices (larger desktops, 1400px and up)
-@media (min-width: 1400px) {
-  @include hero-mixin-min-xxl();
-}
-
-// X-Large devices (large desktops, less than 1400px)
-@media (max-width: 1399.98px) {
-  @include hero-mixin-max-xl();
-}
-
-// Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {
-  @include hero-mixin-max-lg();
-}
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {
-  @include hero-mixin-max-md();
-}
-
-// Small devices (landscape phones, less than 768px)
-@media (max-width: 767.98px) {
-  @include hero-mixin-max-sm();
-}
-
-// X-Small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  @include hero-mixin-max-xs();
-}
-
-// XX-Large devices (larger desktops)
-// No media query since the xxl breakpoint has no upper bound on its width
