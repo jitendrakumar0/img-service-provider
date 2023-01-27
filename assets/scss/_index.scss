@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+@import "variables";
+@import "main";
+
+// ***************Hero Section*********
+.hero-section {
+  background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/index/herobg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  & .inner_section {
+    padding: 12em 0em 0em 0em;
+    & .content {
+      & .servicecontent {
+        & .serviceimg {
+          width: 30px;
+        }
+      }
+      & .mainheading {
+        font-size: 55px;
+        line-height: 100%;
+      }
+      & .brodline {
+        & ul {
+          & li {
+            font-weight: 500;
+            &::marker{
+              color: $theme2;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// *****************Brand Card Section *************
+.brandCard {
+  background: $black;
+  & .inner_section{
+    & .cardSection {
+      margin-bottom: -6rem;
+      & .card {
+        & .card-body {
+          & .card-img {
+            height: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.inner {
+  transform: rotate(90deg);
+  color:  rgba($black, 0.8);
+  letter-spacing: 1rem;
+  transform-origin: left top 0;
+  font-family: Arial, sans-serif;
+  left: 16px;
+  top: 24px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -40px;
+    background: $black;
+    width: 40px;
+    height: 1px;
+  }
+}
+
+.services_heading {
+  & .inner_container {
+    & .swiper {
+      width: 280px;
+    }
+    & .content_side {
+      & .main_content {
+        & .card {
+
+          overflow: hidden;
+          font-family: Arial, Helvetica, sans-serif !important;
+          position: relative;
+          cursor: pointer;
+          transition: all 0.4s;
+          &::before {
+            content: "";
+            background-image: url(../../img/index/card_bg.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            inset: 0;
+            // filter: blur(3px);
+          }
+          &::after{
+            content: "";
+            background: rgba($white, 0.4);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all .4s;
+          }
+          & .card-body {
+            & .heading {
+              transition: all 0.4s;
+            }
+            & ul {
+              & li {
+                font-weight: 500;
+                transition: all .4s;
+              }
+            }
+          }
+          &:hover {
+            box-shadow: 1px 9px 24px rgba(152, 152, 152, 0.25) !important;
+            &::after {
+              top: 0% !important;
+            }
+            // & .card-body {
+            //   color: $theme2 !important;
+            // }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@mixin hero-mixin-min-sm() {
+}
+// Medium devices (tablets, 768px and up)
+@mixin hero-mixin-min-md() {
+}
+
+// Large devices (desktops, 992px and up)
+@mixin hero-mixin-min-lg() {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@mixin hero-mixin-min-xl() {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@mixin hero-mixin-min-xxl() {
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@mixin hero-mixin-max-xs() {
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin hero-mixin-max-sm() {
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin hero-mixin-max-md() {
+}
+
+// Large devices (desktops, less than 1200px)
+@mixin hero-mixin-max-lg() {
+}
+
+// Large devices (desktops, less than 1300px)
+@mixin hero-mixin-max-1300() {
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@mixin hero-mixin-max-xl() {
+}
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  @include hero-mixin-min-sm();
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  @include hero-mixin-min-md();
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  @include hero-mixin-min-lg();
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  @include hero-mixin-min-xl();
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  @include hero-mixin-min-xxl();
+}
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) {
+  @include hero-mixin-max-xl();
+}
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+  @include hero-mixin-max-lg();
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+  @include hero-mixin-max-md();
+}
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+  @include hero-mixin-max-sm();
+}
+
+// X-Small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  @include hero-mixin-max-xs();
+}
+
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width
