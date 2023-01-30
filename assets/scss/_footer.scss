@@ -1,0 +1,57 @@
+.footer_section {
+    & .inner_section {
+
+        & .footer_box {
+            &.card {
+                margin: -95px 0px 0px 0px;
+                & .card-body {
+                    & .footerlogo {
+                        height: 60px;
+                    }
+                    & .linksfooter {
+                        & li {
+                            & .iconImg {
+                                width: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            & .links_footer {
+                & li {
+                    & a {
+                        transition: all ease-in-out 0.3s;
+                        position: relative;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: -10px;
+                            width: 10px;
+                            height: 2px;
+                            background: $white;
+                            opacity: 0;
+                            transition: all ease-in-out 0.3s;
+                        }
+                        &:hover {
+                            transform: translateX(10px);
+                            &:before {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            & .social_icon {
+                & .socillinkfooter {
+                    & li {
+                        & a {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

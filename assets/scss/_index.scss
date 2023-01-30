@@ -221,6 +221,8 @@
   }
 }
 
+// **************Promo Code Section****************
+
 .discountSection {
   background-image: linear-gradient(90deg, rgba($black, 0.8) 30%, rgba($black, 0.5) 100%), url(../img/index/discountbg.jpg);
   background-size: cover;
@@ -228,6 +230,33 @@
   background-repeat: no-repeat;
 }
 
+
+// ***************packagesSection***************
+.packagesSection {
+  & .inner_section {
+    & .cardSection {
+      & .card {
+        &.active{
+          position: relative;
+          &::before{
+            content: 'Popular';
+            position: absolute;
+            top: 5px;
+            right: -30px;
+            font-size: 12px;
+            padding: 10px 30px;
+            font-weight: 600;
+            transform: rotate(45deg);
+            color: $white;
+            background-color: $theme2;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ***********Progress Bar*************************
 .progress {
 	width: 150px;
 	height: 150px;
