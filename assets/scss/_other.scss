@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
 // *****************About Page****************************
-.aboutPageTopSection {
-  background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/about/breadcrumb_bg.jpg);
+.OtherPageTopSection {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,6 +12,12 @@
         height: 20vh;
       }
     }
+  }
+  &.AboutTopSection{
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/about/breadcrumb_bg.jpg);
+  }
+  &.ServicesTopSection {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/about/breadcrumb_bg.jpg);
   }
 }
 
