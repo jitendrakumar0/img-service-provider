@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+// *****************About Page****************************
+.aboutPageTopSection {
+  background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/about/breadcrumb_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 9em 0em 0em 0em;
+  & .inner_section {
+    & .breadcrumbBox {
+      & .breadcrumbs {
+        height: 20vh;
+      }
+    }
+  }
+}
+
+// ******************breadcrumbs***********************
+.breadcrumbs {
+  & nav {
+    & ul {
+      & li {
+        font-weight: 500;
+        &.active {
+          color: $theme1;
+        }
+        & a {
+          position: relative;
+          &::after {
+            content: '/';
+            position: absolute;
+            right: -14px;
+            color: $white;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+//*****************Team***************
+.textimonial {
+  & .inner_section {
+    & .teamCard {
+      & .card {
+        & .card-body {
+          overflow: hidden;
+          transition: all ease-in-out 0.3s;
+          position: relative;
+          &::before{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba($black, 0.5);
+            visibility: hidden;
+            transition: all ease-in-out 0.3s;
+          }
+          & .icons {
+            inset: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all ease-in-out 0.3s;
+          }
+          &:hover {
+            &::before {
+              top: 0;
+              opacity: 1;
+              visibility: visible;
+            }
+            & .icons {
+              opacity: 1;
+              transform: translateY(0px);
+              visibility: visible;
+            }
+          }
+        }
+        & .usernameCard {
+          margin-top: -50px;
+          z-index: 1;
+          box-shadow: 0px 0px 10px 0px rgba($black, 0.2);
+          & .username {
+            font-weight: 600;
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+// **************Our Vision Section************
+.ourVisionSection {
+  background-image: linear-gradient(90deg, rgba($black, 0.8) 30%, rgba($black, 0.8) 100%), url(../img/about/visionBg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

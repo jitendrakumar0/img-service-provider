@@ -14,10 +14,6 @@
           width: 30px;
         }
       }
-      & .mainheading {
-        font-size: 55px;
-        line-height: 100%;
-      }
       & .brodline {
         & ul {
           & li {
@@ -35,7 +31,6 @@
 
 // *****************Brand Card Section *************
 .brandCard {
-  background: $black;
   & .inner_section{
     & .cardSection {
       margin-bottom: -6rem;
@@ -119,14 +114,11 @@
   background-position: center;
   background-repeat: no-repeat;
   & .inner_section {
-    &  .ability {
-      font-size: 50px;
-    }
     & .checkEligibility {
       & .input-group {
         & .form-control {
           &:focus {
-            border-color: transparent !important;
+            border-color: $theme1 !important;
           }
           &:focus-visible {
             outline: none;
@@ -179,7 +171,7 @@
     & .ratings {
       transition: all ease-in-out 0.3s;
       overflow: hidden;
-      box-shadow: 0px 0px 10px 0px rgb(0 0 0 /20%);
+      box-shadow: 0px 0px 10px 0px rgba($black, 0.2);
       left: 0;
       top: -15px;
       transition: all ease-in-out 0.3s;
@@ -257,7 +249,7 @@
 }
 
 // ***********Progress Bar*************************
-.progress {
+.roundedprogress {
 	width: 150px;
 	height: 150px;
 	line-height: 150px;
@@ -394,4 +386,105 @@
 }
 
 
+
+
+
+// ********************Responsive****************
+// -----------Hero Section----------
+@media only screen and (min-width: 990px){
+  .hero-section{
+    & .inner_section{
+      & .content {
+        & .mainheading {
+          font-size: 55px !important;
+          line-height: 100%;
+        }
+      }
+    }
+  }
+  .checkAbility {
+    & .inner_section {
+      &  .ability {
+        font-size: 50px !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767.99px) {
+  .fs-30 {
+    font-size: 25px;
+  }
+  .fs-25 {
+    font-size: 20px;
+  }
+  .fs-20 {
+    font-size: 18px;
+  }
+  .cardSection {
+    & .card {
+      & .card-body{
+        & .card-img {
+          height: 60px;
+        }
+      }
+    }
+  }
+  .whychooseusSection {
+    & .inner_section {
+      & .contentSide {
+        & .whychooseSide {
+          & .monyIcone {
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575.99px) {
+  .fs-30 {
+    font-size: 20px;
+  }
+  .fs-25 {
+    font-size: 16px;
+  }
+  .fs-16 {
+    font-size: 14px;
+  }
+  .fs-20 {
+    font-size: 16px;
+  }
+  .hero-section{
+    & .inner_section{
+      & .content {
+        & .servicecontent {
+          & .serviceimg {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+  .cardSection {
+    & .card {
+      & .card-body{
+        & .card-img {
+          height: 50px;
+        }
+      }
+    }
+  }
+  .whychooseusSection {
+    & .inner_section {
+      & .contentSide {
+        & .whychooseSide {
+          & .monyIcone {
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
 

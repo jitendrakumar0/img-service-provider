@@ -6,7 +6,7 @@
     .icone_list {
         cursor: pointer;
         filter: invert(1);
-        width: 35px;
+        width: 28px;
     }
     & .navbar-nav {
         & .nav-item {
@@ -67,6 +67,17 @@
 
 .tag_title {
     letter-spacing: 0.1rem;
+}
+
+.offcanvas {
+    & .offcanvas-header {
+        & .offcanvas-title {
+            height: 40px;
+        }
+        & .closeBtn {
+            width: 20px;
+        }
+    }
 }
 
 .tag_list {
