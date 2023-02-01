@@ -14,13 +14,13 @@
     }
   }
   &.AboutTopSection{
-    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/about/breadcrumb_bg.jpg);
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.3) 100%), url(../img/about/breadcrumb_bg.jpg);
   }
   &.ServicesTopSection {
-    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/services/serviceBg.jpg);
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.3) 100%), url(../img/services/serviceBg.jpg);
   }
   &.packagesTopSection {
-    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/package/packageBg.jpg);
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.3) 100%), url(../img/package/packageBg.jpg);
   }
   &.contactTopSection {
     background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/package/contectBg.jpg);
@@ -235,32 +235,36 @@
             &::before{
               content: '';
               position: absolute;
-              right: 0%;
-              left: 0;
+              top: 0%;
+              left: 0%;
               height: 100%;
-              width: 0%;
-              background: rgba($black, 0.5);
-              visibility: hidden;
+              width: 100%;
+              background: rgba($black, 0.4);
               transition: all ease-in-out 0.3s;
             }
             & .icons {
-              inset: 0;
+              right: 20px;
+              top: 20px;
               opacity: 0;
               visibility: hidden;
               transform: translateY(10px);
               transition: all ease-in-out 0.3s;
             }
+            & .innerBody {
+              left: 0%;
+              transition: all  ease-in-out 0.3s;
+            }
+            & .readMoreBtn {
+              transform: translateX(-150%);
+            }
             &:hover {
-              &::before {
-                right: 100%;
-                width: 100%;
-                opacity: 1;
-                visibility: visible;
-              }
               & .icons {
                 opacity: 1;
                 transform: translateY(0px);
                 visibility: visible;
+              }
+              & .readMoreBtn {
+                transform: translateX(0%);
               }
             }
             & .card-img-top {
@@ -275,15 +279,16 @@
               }
             }
           }
-          & .usernameCard {
-            margin-top: -50px;
-            z-index: 1;
-            box-shadow: 0px 0px 10px 0px rgba($black, 0.2);
-            & .username {
-              font-weight: 600;
+          &.active {
+            & .readMoreBtn {
+              transform: translateX(0%);
+            }
+            & .icons {
+              visibility: visible;
+              transform: translateY(0px);
+              opacity: 1;
             }
           }
-          
         }
       }
     }
