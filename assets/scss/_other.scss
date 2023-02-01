@@ -17,7 +17,16 @@
     background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/about/breadcrumb_bg.jpg);
   }
   &.ServicesTopSection {
-    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/about/breadcrumb_bg.jpg);
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/services/serviceBg.jpg);
+  }
+  &.packagesTopSection {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($light, 0.3) 100%), url(../img/package/packageBg.jpg);
+  }
+  &.contactTopSection {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/package/contectBg.jpg);
+  }
+  &.BlogTopSection {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/blogBg.jpg);
   }
 }
 
@@ -106,4 +115,177 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+// **********************Services Page**********************
+.serviceWhyChoose {
+  background-image: linear-gradient(90deg, rgba($white, 0.2) 30%, rgba($black, 0.4) 100%), url(../img/about/visionBg.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  & .inner_section {
+    & .contentForm{
+      backdrop-filter: blur(50px);
+    }
+  }
+}
+
+// ****************Package Page****************
+.packageClientSection {
+    & .inner_section {
+      & .contentSide {
+        & .accordion {
+          & .accordion-item {
+            & .accordion-header {
+              & .accordion-button {
+                box-shadow: 0px 0px 10px 0px rgba($black, 0.2) !important;
+                &:not(.collapsed){
+                  background: $theme2 !important;
+                  color: $white !important;
+                  &::after{
+                    filter: brightness(100);
+                  }
+                }
+                &::after {
+                  position: absolute;
+                  left: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+// **********************Contact Us Page******************
+.contactsSection {
+  & .inner_section {
+    & .cardsection {
+      & .card {
+        & .card-body {
+          & .chooseList {
+            height: 100px;
+            width: 100px;
+            z-index: 2;
+            box-shadow: 0px 0px 10px 0px rgba($black, 0.2) !important;
+            transition: all ease-in-out 0.3s;
+            & img {
+              transition: all ease-in-out 0.3s;
+            }
+            &:hover{
+              background-color: $theme2 !important;
+              & img {
+                filter: brightness(100);
+              }
+            }
+          }
+          & .dashBorder {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-bottom: 2px dashed rgba($black, 0.2);
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contactMapSection {
+  & .inner_section {
+    & .contentForm {
+      backdrop-filter: blur(50px);
+    }
+  }
+}
+
+
+// -------------------Responsive---------------------
+@media only screen and (max-width: 575.99px) {
+  .contactsSection {
+    & .inner_section {
+      & .cardsection {
+        & .card {
+          & .card-body {
+            & .chooseList {
+              height: 90px;
+              width: 90px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ****************Blog**************
+.blogSection {
+  & .inner_section {
+    & .leftSide {
+      & .teamCard {
+        & .card {
+          & .card-body {
+            height: 300px;
+            overflow: hidden;
+            transition: all ease-in-out 0.3s;
+            position: relative;
+            &::before{
+              content: '';
+              position: absolute;
+              right: 0%;
+              left: 0;
+              height: 100%;
+              width: 0%;
+              background: rgba($black, 0.5);
+              visibility: hidden;
+              transition: all ease-in-out 0.3s;
+            }
+            & .icons {
+              inset: 0;
+              opacity: 0;
+              visibility: hidden;
+              transform: translateY(10px);
+              transition: all ease-in-out 0.3s;
+            }
+            &:hover {
+              &::before {
+                right: 100%;
+                width: 100%;
+                opacity: 1;
+                visibility: visible;
+              }
+              & .icons {
+                opacity: 1;
+                transform: translateY(0px);
+                visibility: visible;
+              }
+            }
+            & .card-img-top {
+              object-fit: cover;
+            }
+            & .socillinkfooter {
+              & li {
+                & a {
+                  width: 35px;
+                  height: 35px;
+                }
+              }
+            }
+          }
+          & .usernameCard {
+            margin-top: -50px;
+            z-index: 1;
+            box-shadow: 0px 0px 10px 0px rgba($black, 0.2);
+            & .username {
+              font-weight: 600;
+            }
+          }
+          
+        }
+      }
+    }
+  }
 }

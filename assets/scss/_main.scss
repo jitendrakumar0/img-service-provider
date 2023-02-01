@@ -74,46 +74,12 @@ body{
 }
 
 
-// contact_us_page  
-.contact_us_page {
-  background:  url(../../img/contact_us/banner-bg.webp);
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  & .home_heading {
-    font-weight: 600;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-}
 
 .form-control , .form-select{
-  font-weight: 600;
   &:focus-visible{
     border-color: $theme1;
-    
   }
-}
-
-.contact_form {
-  font-family: Arial, Helvetica, sans-serif !important;
-  & .card {
-    box-shadow: 0px 0 30px rgb(1 41 112 / 10%);
-  }
-}
-
-.contect_us_card {
-  & .card {
-    background: linear-gradient(45deg, rgb($black, 0.4) 50%, rgb($black, 0.1) 100%),   url(../../img/contact_us/card_img.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    // background-color: rgb($black, 0.5);
-    background-color: $gray-100;
-    & .card-body {
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    &::before {
-      
-    }
+  &::placeholder{
+    color: $black;
   }
 }
