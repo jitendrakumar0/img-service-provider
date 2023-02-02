@@ -1,9 +1,9 @@
 
-// $(window).on('load', function () {
-//     setTimeout(function () { 
-//         $('.page-loader').fadeOut('slow');
-//     }, 1000);
-// });
+$(window).on('load', function () {
+    setTimeout(function () { 
+        $('.page-loader').fadeOut('slow');
+    }, 1000);
+});
 
 $(window).scroll(function () {
     var scroll = $(window).scrollTop();
@@ -15,9 +15,9 @@ $(window).scroll(function () {
 });
 
 
-$(document).ready(function () {
-    $('.preloader').addClass('active');
-});
+// $(document).ready(function () {
+//     $('.preloader').addClass('active');
+// });
 
 
 
