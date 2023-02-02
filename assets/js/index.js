@@ -1,94 +1,31 @@
-// $('.example').owlCarousel({
-//     loop: true,
-//     items: 9,
-//     margin: 0,
-//     nav: true,
-//     dots: false,
-//     autoplay: true,
-//     center: true,
-//     freeDrag: false,
-//     lazyLoad: true,
-//     autoplayTimeout: 2000,
-//     autoplayHoverPause: true,
-//     smartSpeed: 1200,
-//     responsiveClass: true,
-//     responsive: {
-//         0: {
-//             items: 3,
-//             nav: false
-//         },
-//         500: {
-//             items: 4,
-//             nav: false
-//         },
-//         600: {
-//             items: 6,
-//             nav: false
-//         },
-//         1000: {
-//             items: 7,
-//             nav: true
-//         },
-//         1299: {
-//             items: 8,
-//             nav: true
-//         },
-//         1499: {
-//             items: 9,
-//             nav: true
-//         }
-//     },
-//     navText: ["<i class='imgs img-chevron-left'></i>", "<i class='imgs img-chevron-right'></i>"]
+
+// $(window).on('load', function () {
+//     setTimeout(function () { 
+//         $('.page-loader').fadeOut('slow');
+//     }, 1000);
 // });
 
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll <= 80) {
+        $("nav.navbar").removeClass("nav-active");
+    } else {
+        $("nav.navbar").addClass("nav-active");
+    }
+});
 
-// $('.custom1').owlCarousel({
-//     animateOut: 'slideOutDown',
-//     animateIn: 'flipInX',
-//     animateOut: 'fadeOut',
-//     items:1,
-//     margin:0,
-//     autoplay: true,
-//     center: true,
-//     lazyLoad: true,
-//     loop: true,
-//     autoplayTimeout: 2000,
-//     autoplayHoverPause: true,
-//     smartSpeed: 1200,
-//     stagePadding:0,
-//     smartSpeed:450,
-//     responsive: {
-//         0: {
-//             items: 1,
-//             nav: false
-//         },
-//         500: {
-//             items: 1,
-//             nav: true,
-//             dots: false,
-//         }
-//     },
-//     navText: ["<i class='imgs img-chevron-left'></i>", "<i class='imgs img-chevron-right'></i>"]
-// });
+
+$(document).ready(function () {
+    $('.preloader').addClass('active');
+});
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// active header for other pages
+if (!$(".hero-section").length) {
+    $('nav.navbar').addClass('always-nav-active');
+};
 
     var TxtType = function(el, toRotate, period) {
         this.toRotate = toRotate;

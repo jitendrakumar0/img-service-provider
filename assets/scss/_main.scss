@@ -16,6 +16,7 @@
 
 body{
   font-family: 'Poppins', sans-serif;
+  background-color: rgba($primary, 0.01);
 }
 
 // Font Size
@@ -67,7 +68,7 @@ body{
   & .spinner {
     min-width: 300px;
     min-height: 300px;
-    background: $white url(../../img/index/Eclipse-1s-200px.gif);
+    background: $white url(../img/index/preloader.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
