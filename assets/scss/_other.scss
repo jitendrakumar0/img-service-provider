@@ -213,6 +213,12 @@
 // ****************Blog**************
 .blogSection {
   & .inner_section {
+    & .singalBlogmainImage{
+      min-height: 250px;
+      & img {
+        object-fit: cover;
+      }
+    }
     & .blogMainImage {
       cursor: pointer;
       transition: all ease-in-out 0.5s;
@@ -237,6 +243,7 @@
           visibility: visible;
         }
       }
+      
     }
     & .leftSide {
       & .teamCard {
@@ -309,6 +316,14 @@
               transform: translateY(0px);
               opacity: 1;
             }
+          }
+        }
+      }
+      & .singalPostcommunicate {
+        & li {
+          &::marker {
+            color: $theme2 !important;
+            font-size: 18px;
           }
         }
       }
