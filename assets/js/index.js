@@ -2,7 +2,8 @@
 $(window).on('load', function () {
     setTimeout(function () { 
         $('.page-loader').fadeOut('slow');
-    }, 1000);
+        $('body').removeClass('overflow-hidden');
+    }, 100);
 });
 
 $(window).scroll(function () {
