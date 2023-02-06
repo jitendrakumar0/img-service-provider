@@ -102,3 +102,9 @@ if (!$(".hero-section").length) {
             }, false)
         })
     })()
+
+
+    // glightbox
+    var lightboxInlineIframe = GLightbox({
+        selector: '.glightbox'
+    });

@@ -247,7 +247,15 @@
           visibility: visible;
         }
       }
-      
+      &.glightBoxVideo{
+        &::before{
+          inset: 0;
+          width: 100%;
+          background: rgba($black, 0.4);
+          opacity: 1 !important;
+          visibility: visible !important;
+        }
+      }
     }
     & .leftSide {
       & .teamCard {
@@ -331,6 +339,48 @@
           }
         }
       }
+      & .navTabs {
+        flex-wrap: nowrap;
+        overflow: auto hidden;
+        gap: 15px;
+        & .nav-item {
+          & .nav-link {
+            transition: all 0.3s ease-in-out;
+            border-bottom: 2px solid transparent;
+            &.active {
+              color: $theme2 !important;
+              background: $white;
+              border-color: rgba($black, 0.8);
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+    }
+      ::-webkit-scrollbar {
+        height: 6px;
+        margin: 20px 10px;
+      }
+  
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+  
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: $theme2;
+        border-radius: 10px;
+      }
+  
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: $theme2;
+        cursor: pointer;
+      }
     }
     & .rightSideBar {
       & .sideBarCard {
@@ -376,6 +426,10 @@
                     position: absolute;
                     left: 0px;
                     top: 1px;
+                  }
+                  &.active {
+                    color: $theme2 !important;
+                    letter-spacing: 1px;
                   }
                   &:hover {
                     color: $theme2 !important;
@@ -444,6 +498,86 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ***************glightbox***************
+.box-container {
+  & .box {
+    & .inner {
+      & .video_playBtn {
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        box-sizing: content-box;
+        display: block;
+        width: 32px;
+        height: 44px;
+        border-radius: 50%;
+        padding: 18px 20px 18px 28px;
+        &:before {
+          content: "";
+          position: absolute;
+          z-index: 0;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          display: block;
+          width: 80px;
+          height: 80px;
+          background: $theme2;
+          border-radius: 50%;
+          animation: pulse-border 1500ms ease-out infinite;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          left: 50%;
+          top: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          display: block;
+          width: 80px;
+          height: 80px;
+          background: rgba($theme2, 0.8);
+          border-radius: 50%;
+          transition: all 200ms;
+        }
+        &:hover:after {
+          background-color: darken($theme2, 10%);
+        }
+        &  span {
+          display: block;
+          position: relative;
+          z-index: 3;
+          width: 0;
+          height: 0;
+          border-left: 32px solid $white;
+          border-top: 22px solid transparent;
+          border-bottom: 22px solid transparent;
+          & img {
+            position: relative;
+            z-index: 3;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+          }
+        }
+        
+        @keyframes pulse-border {
+          0% {
+            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+            opacity: 0;
           }
         }
       }
