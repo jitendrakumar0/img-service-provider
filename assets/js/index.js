@@ -103,8 +103,15 @@ if (!$(".hero-section").length) {
         })
     })()
 
-
+    if ($("[page-name=blogcategirues]").length) {
     // glightbox
     var lightboxInlineIframe = GLightbox({
         selector: '.glightbox'
     });
+}
+if ($("[page-name=gallerySection]").length) {
+    // glightbox
+    var lightboxInlineIframe = GLightbox({
+        selector: '.glightbox1'
+    });
+}

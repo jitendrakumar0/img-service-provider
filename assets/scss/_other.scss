@@ -39,8 +39,59 @@
     background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/Categories_bg.jpg);
     background-position: bottom;
   }
+  &.faqSectionPage {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/faqBg.jpg);
+  }
+  &.disclaimerPage {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.3) 100%), url(../img/blog/disclaimerBg.jpg);
+  }
   
 }
+
+// ****************page-name="gallerySection"**************
+
+  .gallerySection {
+    & .inner_section {
+      & .box-container {
+        & .box {
+          & .galleryMainImage {
+            transition: all ease-in-out 0.3s;
+            & .glightImage {
+            transition: all ease-in-out 0.3s;
+            }
+            & .openImg {
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              width: 0px;
+              height: 0px;
+              background-color: rgba($black, 0.5);
+              opacity: 0;
+              visibility: hidden;
+              transition: all ease-in-out 0.3s;
+              & span {
+                & img {
+                  filter: brightness(100);
+                }
+              }
+            }
+            &:hover{
+              & .openImg {
+                width: 70px;
+                height: 70px;
+                opacity: 1;
+                visibility: visible;
+              }
+              & .glightImage {
+                transform: scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
 
 // ******************breadcrumbs***********************
 .breadcrumbs {
@@ -151,17 +202,24 @@
           & .accordion-item {
             & .accordion-header {
               & .accordion-button {
-                box-shadow: 0px 0px 10px 0px rgba($black, 0.2) !important;
+                font-weight: 600;
+                border-bottom: 1px solid $theme2 !important;
                 &:not(.collapsed){
-                  background: $theme2 !important;
-                  color: $white !important;
+                  background: $white !important;
+                  color: $theme2 !important;
                   &::after{
-                    filter: brightness(100);
+                    // filter: brightness(100);
+                    content: '-';
+                    background-image: none;
+                    transform: none;
+                    font-size: 25px;
                   }
                 }
                 &::after {
-                  position: absolute;
-                  left: 18px;
+                  content: '+';
+                    background-image: none;
+                    transform: none;
+                    font-size: 25px;
                 }
               }
             }
@@ -170,6 +228,7 @@
       }
     }
 }
+
 
 // **********************Contact Us Page******************
 .contactsSection {
@@ -643,7 +702,63 @@
   }
 }
 
+
+// ********************FAQ Page*************************
+
+.fagPage {
+  & .inner_section {
+    & .accordion {
+      & .accordion-item {
+        & .accordion-header {
+          & .accordion-button {
+            font-weight: 600;
+            border-bottom: 1px solid $theme2 !important;
+            &:not(.collapsed){
+              background: $white !important;
+              color: $theme2 !important;
+              &::after{
+                // filter: brightness(100);
+                content: '-';
+                background-image: none;
+                transform: none;
+                font-size: 25px;
+              }
+            }
+            &::after {
+              content: '+';
+                background-image: none;
+                transform: none;
+                font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 // -------------------Responsive---------------------
+@media only screen and (max-width: 767.99px) {
+  [page-name="gallerySection"] {
+    &.gallerySection {
+      & .inner_section {
+        & .box-container {
+          & .box {
+            & .galleryMainImage {
+              &:hover{
+                & .openImg {
+                  width: 50px;
+                  height: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media only screen and (max-width: 575.99px) {
   .contactsSection {
     & .inner_section {
