@@ -98,11 +98,12 @@
 
 
 
-.android_btn {
-    border-radius: 8px;
-    background-color: $black;
-    transition: .4s;
-    &:hover {
-    background-color: rgba($black, 0.9);
+// --------------------
+@media only screen and (max-width: 350.99px) {
+.download_btn {
+    height: 40px;
+    &.checkBtn {
+        padding: 0 25px;
     }
+}
 }

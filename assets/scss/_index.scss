@@ -416,15 +416,6 @@
 }
 
 @media only screen and (max-width: 767.99px) {
-  .fs-30 {
-    font-size: 25px;
-  }
-  .fs-25 {
-    font-size: 20px;
-  }
-  .fs-20 {
-    font-size: 18px;
-  }
   .cardSection {
     & .card {
       & .card-body{
@@ -447,18 +438,6 @@
   }
 }
 @media only screen and (max-width: 575.99px) {
-  .fs-30 {
-    font-size: 20px;
-  }
-  .fs-25 {
-    font-size: 16px;
-  }
-  .fs-16 {
-    font-size: 14px;
-  }
-  .fs-20 {
-    font-size: 16px;
-  }
   .hero-section{
     & .inner_section{
       & .content {

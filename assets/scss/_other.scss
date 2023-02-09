@@ -48,6 +48,9 @@
   &.privacyPolicyPage {
     background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/privacypolicyBg.jpg);
   }
+  &.termsConditionPage {
+    background-image: linear-gradient(90deg, rgba($black, 0.5) 30%, rgba($black, 0.5) 100%), url(../img/blog/termBg.jpg);
+  }
 }
 
 // ****************page-name="gallerySection"**************
@@ -851,6 +854,23 @@
       }
     }
   }
+// .blogSection {
+//   & .inner_section {
+//     & .rightSideBar  {
+//       & .sideBarCard {
+//         & .card {
+//           & .card-body{
+//             & .userPost {
+//               & .postLink {
+//                 font-size: 13px;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
   .disclaimerPageSection {
     & .inner_section {
       & .disclaimerCaseImg {

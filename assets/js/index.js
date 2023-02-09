@@ -20,6 +20,8 @@ $(window).scroll(function () {
 //     $('.preloader').addClass('active');
 // });
 
+// AOS
+AOS.init();
 
 
 
@@ -108,11 +110,14 @@ if (!$(".hero-section").length) {
         selector: '.glightbox'
     });
 }
+if ($("[page-name=blogcategirues]").length) {
+    $('.nav-link, .caregorieLink').click(function () {
+        AOS.init().reload;
+    });
+}
 if ($("[page-name=gallerySection]").length) {
     var lightboxInlineIframe = GLightbox({
         selector: '.glightbox1'
     });
 }
 
-// AOS
-AOS.init();
