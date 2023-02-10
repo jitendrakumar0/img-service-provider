@@ -3,7 +3,7 @@ $(window).on('load', function () {
     setTimeout(function () { 
         $('.page-loader').fadeOut('slow');
         $('body').removeClass('overflow-hidden');
-    }, 1000);
+    }, 70);
 });
 
 $(window).scroll(function () {
