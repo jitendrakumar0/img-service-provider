@@ -46,11 +46,11 @@
     <meta name="classification" content="Title here" />
     <link rel="canonical" href="" />
     <!-- Bootstrap Css -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css?v=1.0.0">
     <!-- AOS Css -->
-    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css?v=1.0.0">
     <!-- Custom Css -->
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css?v=1.0.0">
 </head>
 
 <body class="overflow-hidden">
@@ -59,10 +59,10 @@
     <!-- include Header -->
     <div include-html="layout/header.html" id="header_file"></div>
     <!-- Hero Section -->
-    <div class="container-fluid hero-section vh-100 position-relative">
+    <div class="container-fluid hero-section vh-100 position-relative d-none">
         <div class="container inner_section h-100 d-flex align-items-center py-md-0 py-5">
             <div class="row mt-md-0 mt-5">
-                <div class="col-xl-6 col-lg-9 col-12 px-0 row mx-0 gap-md-4 gap-3 content" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col-xl-6 col-lg-9 col-12 px-0 row mx-0 gap-md-4 gap-3 content" >
                     <div class="col-12 fs-25 text-white fw-bold servicecontent d-flex align-items-sm-center align-items-start gap-2"><div class="serviceimg d-flex align-items-center"><img src="assets/img/icon/wifi.svg" class="w-100" alt=""></div>ImgTemp Broadband Service</div>
                     <div class="col-12 mainheading fs-1 fw-bolder text-white">Connect Faster And Easier With 
                         <a href="javascript:;" class="typewrite text-decoration-none text-theme2 text-center fw-bold" data-period="3000" data-type='[ " ImgTemp"]'>
@@ -90,17 +90,50 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid hero-section vh-100 position-relative">
+        <div class="container inner_section h-100 d-flex align-items-center py-md-0 py-5">
+            <div class="row mt-md-0 mt-5 gap-md-4 gap-3">
+                <div class="col-xxl-6 col-lg-9 col-12 px-0 row mx-0 gap-md-4 gap-3 content" >
+                    <div class="col-12 fs-25 text-white fw-bold servicecontent d-flex align-items-sm-center align-items-start gap-2"><div class="serviceimg d-flex align-items-center"><img src="assets/img/icon/wifi.svg" class="w-100" alt=""></div>ImgTemp Broadband Service</div>
+                    <div class="col-lg-12 col-sm-9 col-11 mainheading fs-1 fw-bolder text-white mainHeadingContent">Connect Faster And Easier With 
+                        <a href="javascript:;" class="typewrite text-decoration-none text-theme2 text-center fw-bold" data-period="3000" data-type='[ " ImgTemp"]'>
+                            <span class="wrap"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 px-0 row mx-0 gap-md-4 gap-3 content">
+                    <div class="brodline col-lg-3 col-md-4 col-sm-6 text-white ps-0">
+                        <ul class="fs-16">
+                            <li>Home Broadband</li>
+                            <li>Cell Phone Connection</li>
+                            <li>Home Security</li>
+                            <li>99% Internet Uptime</li>
+                        </ul>
+                    </div>
+                    <div class="brodline col-lg-3 col-md-4 col-sm-6 text-white ps-0">
+                        <ul class="fs-16">
+                            <li>Download 1Gbps</li>
+                            <li>ImgTemp TV Box</li>
+                            <li>Mobile Connection</li>
+                            <li>24/7 Customer Support</li>
+                        </ul>
+                    </div>
+                    <div class=""><a href="javascript:;" class="download_btn main_btn more_btn text-theme2 text-decoration-none">View Details</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Hero Section End -->
 
     <!-- Brand Card -->
     <div class="container-fluid brandCard bg-black">
         <div class="container inner_section pt-5">
             <div class="row">
-                <div class="col text-white" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col text-white" >
                     <div class="fs-30 fw-bold" >Call Us Now And Connect ImgTemp</div>
                     <div class="fs-30 fw-bold"><a href="tel: +180012001500" class="text-decoration-none text-white">+1800 1200 1500</a></div>
                 </div>
-                <div class="col-lg-auto mt-lg-0 mt-4" data-aos="fade-left" data-aos-duration="1000"><a href="javascript:;" class="download_btn main_btn more_btn text-theme2 text-decoration-none text-nowrap checkBtn">CHECK COVERAGE IN YOUR AREA</a></div>
+                <div class="col-lg-auto mt-lg-0 mt-4" ><a href="javascript:;" class="download_btn main_btn more_btn text-theme2 text-decoration-none text-nowrap checkBtn">CHECK COVERAGE IN YOUR AREA</a></div>
                 <div class="col-12 px-0 mx-0 row pt-5 cardSection">
                     <div class="col-lg-4 mb-lg-0 mb-4" data-aos="fade-up" data-aos-duration="1000">
                         <div class="card h-100 border-0 rounded-4">
@@ -141,9 +174,9 @@
     <!-- About Us Section -->
     <div class="container-fluid py-5 my-md-5 mt-5">
         <div class="container mt-md-5 mt-2 pt-lg-5">
-            <div class="sectionheading mb-lg-5 mb-4 fs-2 fw-bold text-black" data-aos="fade-right" data-aos-duration="1000">About <span class="text-theme2">Us</span></div>
+            <div class="sectionheading mb-lg-5 mb-4 fs-2 fw-bold text-black" >About <span class="text-theme2">Us</span></div>
             <div class="row justify-content-between">
-                <div class="col-xl-6 col-lg-7 position-relative order-lg-1 order-2 ps-md-0 ps-4" data-aos="fade-up-right" data-aos-duration="1000">
+                <div class="col-xl-6 col-lg-7 position-relative order-lg-1 order-2 ps-md-0 ps-4">
                     <h6 class="sideHeading typewrite m-0">About Us</h6>
                     <div class="fs-30 text-black fw-bold lh-150">We Provide Best Broadband & <span class="text-theme2">Internet</span> Service Provider</div>
                     <div class="fs-16 lh-150 mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, perferendis debitis error nulla consequatur a dolores blanditiis adipisci sapiente perspiciatis!</div>
@@ -155,9 +188,9 @@
                             <div class="d-flex align-items-center text-black fw-bold fs-20"><span class="fw-bolder fs-30 text-theme2 me-2">4837 +</span> Connection Provided</div>
                         </div>
                     </div>
-                    <div class=""><a href="javascript:;" class="download_btn main_btn more_btn text-theme2 text-decoration-none">Read More</a></div>
+                    <div class=""><a href="about.html" class="download_btn main_btn more_btn text-theme2 text-decoration-none">Read More</a></div>
                 </div>
-                <div class="col-lg-5 order-lg-2 order-1 mb-lg-0 mb-4" data-aos="fade-up-left" data-aos-duration="1000">
+                <div class="col-lg-5 order-lg-2 order-1 mb-lg-0 mb-4" data-aos="fade-left" data-aos-duration="1000">
                     <div class=""><img src="assets/img/index/aboutus.png" alt="" class="w-100"></div>
                 </div>
             </div>
@@ -169,10 +202,10 @@
     <div class="container-fluid checkAbility mb-5">
         <div class="container inner_section py-5">
             <div class="row justify-content-center my-5">
-                <div class="col-xl-8 col-lg-10" data-aos="fade-right" data-aos-duration="1000">
+                <div class="col-xl-8 col-lg-10" >
                     <div class="fw-bolder fs-1 ability text-white text-center lh-120"><span class="text-theme2">Check ability</span> to connect our services in your area</div>
                 </div>
-                <div class="col-xl-6 col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+                <div class="col-xl-6 col-lg-7" >
                     <form action="" class="mt-5 checkEligibility">
                         <div class="input-group">
                             <input class="form-control py-lg-3 py-md-2  fs-20 text-black shadow-none" aria-label="With input"></input>
@@ -188,9 +221,9 @@
     <!-- Why Choose Us Section -->
     <div class="container-fluid py-md-5 whychooseusSection">
         <div class="container inner_section">
-            <div class="sectionheading mb-md-5 mb-4 fs-2 fw-bold text-black" data-aos="fade-right" data-aos-duration="1000">Why Choose <span class="text-theme2">Us</span></div>
+            <div class="sectionheading mb-md-5 mb-4 fs-2 fw-bold text-black" >Why Choose <span class="text-theme2">Us</span></div>
             <div class="row pt-4 justify-content-between">
-                <div class="col-xl-5 col-lg-6 mb-lg-0 mb-4 leftSide position-relative" data-aos="zoom-in-right" data-aos-duration="1000">
+                <div class="col-xl-5 col-lg-6 mb-lg-0 mb-4 leftSide position-relative" data-aos="fade-right" data-aos-duration="1000">
                     <div class="rounded-4 userImg position-relative h-100"><img src="assets/img/index/whychooseus.jpg" alt="" class="w-100 h-100 rounded-4"></div>
                     <div class="text-center card d-inline-block border-0 bg-white position-absolute ratings">
                         <div class="card-body">
@@ -199,7 +232,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 ps-xl-2 ps-lg-5 position-relative contentSide" data-aos="zoom-in-left" data-aos-duration="1000">
+                <div class="col-lg-6 ps-xl-2 ps-lg-5 position-relative contentSide">
                     <div class="fs-30 text-black fw-bold lh-150">Customer <span class="text-theme2">Satisfaction</span> Is Our Goal</div>
                     <div class="fs-16 lh-150 mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, perferendis debitis error nulla consequatur a dolores blanditiis adipisci sapiente perspiciatis!</div>
                     <div class="col-12 px-0 mx-0 row py-4 gap-4 whychooseSide">
@@ -240,9 +273,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-md-center">
-                    <div class="sectionheading  mb-4  fs-2 fw-bold text-black" data-aos="fade-right" data-aos-duration="1000">Our Best <span class="text-theme2">Services</span></div>
-                    <div class="fw-bolder mb-md-4 mb-3 text-black fs-1 lh-120" data-aos="fade-left" data-aos-duration="1000">Experience The Magic Of ImgTemp</div>
-                    <div class="fs-16 text-dark" data-aos="fade-right" data-aos-duration="1000">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi commodi, earum exercitationem repudiandae mollitia impedit.</div>
+                    <div class="sectionheading  mb-4  fs-2 fw-bold text-black" >Our Best <span class="text-theme2">Services</span></div>
+                    <div class="fw-bolder mb-md-4 mb-3 text-black fs-1 lh-120" >Experience The Magic Of ImgTemp</div>
+                    <div class="fs-16 text-dark" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi commodi, earum exercitationem repudiandae mollitia impedit.</div>
                 </div>
                 <div class="col-12 px-0 mx-0 g-4 row pt-lg-5 cardSection">
                     <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="1000">
@@ -315,10 +348,10 @@
     <div class="container-fluid discountSection my-md-5 mt-2 py-5">
         <div class="container inner_section my-5 py-md-5">
             <div class="row g-3">
-                <div class="col-12 fs-20 text-white fw-bolder" data-aos="fade-right" data-aos-duration="1000">PROMO</div>
-                <div class="col-12 fs-20 fw-bold text-white" data-aos="fade-left" data-aos-duration="1000"> <span class="text-theme2">Discount Up</span> To 30% For  New Members</div>
-                <div class="col-lg-6 fs-1 fw-bold text-white lh-120" data-aos="fade-right" data-aos-duration="1000">Try Our TV & Internet Services Just For <span class="text-theme1"> $20 per month</span></div>
-                <div class="col-lg-7 text-white fs-16" data-aos="fade-left" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam earum doloribus dolores laudantium mollitia magni quae aperiam eaque maxime similique, rem, vitae itaque. Harum, reiciendis consequuntur veniam ut voluptatibus adipisci.</div>
+                <div class="col-12 fs-20 text-white fw-bolder" >PROMO</div>
+                <div class="col-12 fs-20 fw-bold text-white" > <span class="text-theme2">Discount Up</span> To 30% For  New Members</div>
+                <div class="col-lg-6 fs-1 fw-bold text-white lh-120" >Try Our TV & Internet Services Just For <span class="text-theme1"> $20 per month</span></div>
+                <div class="col-lg-7 text-white fs-16" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam earum doloribus dolores laudantium mollitia magni quae aperiam eaque maxime similique, rem, vitae itaque. Harum, reiciendis consequuntur veniam ut voluptatibus adipisci.</div>
             </div>
         </div>
     </div>
@@ -329,12 +362,12 @@
         <div class="container inner_section">
             <div class="row">
                 <div class="col-12 text-md-center">
-                    <div class="sectionheading mb-4 fs-2 fw-bold text-black" data-aos="fade-right" data-aos-duration="1000">Our Best <span class="text-theme2">Packages</span></div>
-                    <div class="fw-bolder mb-md-4 mb-3 text-black fs-1 lh-120" data-aos="fade-left" data-aos-duration="1000">Choose Your Favorite packages</div>
-                    <div class="fs-16 text-dark" data-aos="fade-right" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, aliquam laborum! Sunt tempora fugit aliquid.</div>
+                    <div class="sectionheading mb-4 fs-2 fw-bold text-black" >Our Best <span class="text-theme2">Packages</span></div>
+                    <div class="fw-bolder mb-md-4 mb-3 text-black fs-1 lh-120" >Choose Your Favorite packages</div>
+                    <div class="fs-16 text-dark" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, aliquam laborum! Sunt tempora fugit aliquid.</div>
                 </div>
                 <div class="col-12 px-0 mx-0 g-4 row pt-lg-5 cardSection">
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-4 col-md-6" >
                         <div class="card h-100 border-0 rounded-4">
                             <div class="card-body p-4 pt-5">
                                 <div class="roundedprogress blue">
@@ -358,11 +391,11 @@
                                     </ul>
                                 </div>
                                 <div class="text-center my-3"><a href="javascript:;" class="download_btn main_btn more_btn text-theme2 text-decoration-none">Purchase Now</a></div>
-                                <a href="javascript:;" class="readMoreBtn d-flex align-items-center text-decoration-none text-theme2 fw-bold fs-14">View Detail <img src="assets/img/icon/rightarrow.svg" class="ms-2" alt=""></a>
+                                <a href="packages.html" class="readMoreBtn d-inline-flex align-items-center text-decoration-none text-theme2 fw-bold fs-14">View Detail <img src="assets/img/icon/rightarrow.svg" class="ms-2" alt=""></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-4 col-md-6" >
                         <div class="card h-100 border-0 rounded-4 active">
                             <div class="card-body p-4 pt-5">
                                 <div class="roundedprogress blue">
@@ -386,11 +419,11 @@
                                     </ul>
                                 </div>
                                 <div class="text-center my-3"><a href="javascript:;" class="download_btn main_btn more_btn text-theme2 text-decoration-none">Purchase Now</a></div>
-                                <a href="javascript:;" class="readMoreBtn d-flex align-items-center text-decoration-none text-theme2 fw-bold fs-14">View Detail <img src="assets/img/icon/rightarrow.svg" class="ms-2" alt=""></a>
+                                <a href="packages.html" class="readMoreBtn d-inline-flex align-items-center text-decoration-none text-theme2 fw-bold fs-14">View Detail <img src="assets/img/icon/rightarrow.svg" class="ms-2" alt=""></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="col-lg-4 col-md-6" >
                         <div class="card h-100 border-0 rounded-4">
                             <div class="card-body p-4 pt-5">
                                 <div class="roundedprogress blue">
@@ -414,7 +447,7 @@
                                     </ul>
                                 </div>
                                 <div class="text-center my-3"><a href="javascript:;" class="download_btn main_btn more_btn text-theme2 text-decoration-none">Purchase Now</a></div>
-                                <a href="javascript:;" class="readMoreBtn d-flex align-items-center text-decoration-none text-theme2 fw-bold fs-14">View Detail <img src="assets/img/icon/rightarrow.svg" class="ms-2" alt=""></a>
+                                <a href="packages.html" class="readMoreBtn d-inline-flex align-items-center text-decoration-none text-theme2 fw-bold fs-14">View Detail <img src="assets/img/icon/rightarrow.svg" class="ms-2" alt=""></a>
                             </div>
                         </div>
                     </div>
@@ -429,13 +462,13 @@
     <!-- Include Footer -->
     <script src="assets/libs/include/jquery-3.6.0.min.js"></script>
     <div include-html="layout/footer.html" id="footer_file"></div>
-    <script src="assets/libs/include/include-html.min.js"></script>
+    <script src="assets/libs/include/include-html.min.js?v=1.0.0"></script>
     <!-- Bootstrap Js -->
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js?v=1.0.0"></script>
     <!--AOs Js -->
-    <script src="assets/libs/aos/js/aos.min.js"></script>
+    <script src="assets/libs/aos/js/aos.min.js?v=1.0.0"></script>
     <!-- Custom Js -->
-    <script src="assets/js/index.min.js"></script>
+    <script src="assets/js/index.min.js?v=1.0.0"></script>
     
 </body>
 </html>

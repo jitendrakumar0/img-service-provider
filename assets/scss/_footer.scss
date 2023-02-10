@@ -27,6 +27,12 @@
                             & .iconImg {
                                 width: 25px;
                             }
+                            & a {
+                                transition: all ease-in-out 0.3s;
+                                &:hover{
+                                        color: $theme1 !important;
+                                }
+                            }
                         }
                     }
                 }
